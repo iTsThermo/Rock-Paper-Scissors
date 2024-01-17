@@ -1,44 +1,80 @@
 //Precondition: None
-//Poscondition: Returns random outcome - Rock, Paper, Scissors as computer choice
+//Postcondition: Returns random outcome - Rock, Paper, Scissors as computer choice
 function getComputerChoice(){
-    let choice = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+    let choice = Math.floor(Math.random() * 3);
     switch(choice){
         case 0:
-            return "Rock";
+            return "rock";
         case 1:
-            return "Paper";
+            return "paper";
         case 2:
-            return "Scissors";
+            return "scissors";
     }
 }
 
-const npc = getComputerChoice();
-console.log("NPC Choice: " + npc)
-const player = "Rock";
+//Precondition: None
+//Postcondition: Game of Rock-Paper-Scisorrs is played a # of times to determine a winner
+function game(){
+let playerPoints = 0;
+let npcPoints = 0;
+
+let numOfRounds = 5;
+let roundsPlayed = 0;
+
+while(numOfRounds > roundsPlayed){
+    let npc = getComputerChoice();
+    let player = prompt("Pick Rock-Paper-Scissors");
+    player = player.toLowerCase();
+    console.log(round(player, npc));
+    ++roundsPlayed;
+}
+
+if (playerPoints > npcPoints){
+    return "You Win!";
+}
+else if (npcPoints > playerPoints){
+    return "Computer Wins!"
+}
+else{
+    return "Draw!";
+}
 
 function round(player, npc){
-    if (player == npc){
-        return "It was a tie, re-roll";
+    if (player == 'rock' && npc == 'scissors'){
+        ++playerPoints;
+        return "You wins: Rock beats Scissors";
+        
     }
-    else if (player == 'Rock' && npc == 'Scissors'){
-        return "Player wins: Rock beats Scissors";
+    else if (player == 'rock' && npc == 'paper'){
+        ++npcPoints;
+        return "You loses: Rock loses against Paper";
+        
     }
-    else if (player == 'Rock' && npc == 'Paper'){
-        return "Player loses: Rock loses against Paper";
+    else if (player == 'paper' && npc == 'scissors'){
+        ++npcPoints;
+        return "You Loses: Paper loses against Scissors";
+        
     }
-    else if (player == 'Paper' && npc == 'Scissors'){
-        return "Player Loses: Paper loses against Scissors";
+    else if(player == 'paper' && npc == 'rock'){
+        ++playerPoints;
+        return "You Wins: Paper wins against Rock";
+        
     }
-    else if(player == 'Paper' && npc == 'Rock'){
-        return "Player Loses: Paper wins against Rock";
+    else if(player == 'scissors' && npc == 'rock'){
+        ++npcPoints;
+        return "You Loses: Scissors loses against Rock";
+        
     }
-    else if(player == 'Scissors' && npc == 'Rock'){
-        return "Player Loses: Scissors loses against Rock";
+    else if(player == 'scissors' && npc == 'paper'){
+        ++playerPoints;
+        return "You Wins: Scissors wins against Paper";
     }
-    else if(player == 'Scissors' && npc == 'Paper'){
-        return "Player Wins: Scissors wins against Paper";
+    else{
+        console.log("TIE! Re-Rolling")
+        let new_roll = getComputerChoice();
+        return round(player, new_roll);
     }
-    
+}
 }
 
-console.log(round(player, npc));
+console.log(game());
