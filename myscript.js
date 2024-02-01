@@ -1,3 +1,6 @@
+const start = document.querySelector('#start');
+start.addEventListener('click', game)
+
 //Precondition: None
 //Postcondition: Returns random outcome - Rock, Paper, Scissors as computer choice
 function getComputerChoice(){
@@ -21,13 +24,32 @@ let npcPoints = 0;
 let numOfRounds = 5;
 let roundsPlayed = 0;
 
-while(numOfRounds > roundsPlayed){
+document.querySelector("#rock").addEventListener('click', ()=>{
     let npc = getComputerChoice();
-    let player = prompt("Pick Rock-Paper-Scissors");
-    player = player.toLowerCase();
-    console.log(round(player, npc));
-    ++roundsPlayed;
-}
+    console.log(round("rock", npc));
+    roundsPlayed++;
+    if (numOfRounds - 1 < roundsPlayed){
+        console.log("Done with 5 games");
+        roundsPlayed = 0;
+    }});
+    
+document.querySelector('#paper').addEventListener('click', ()=>{
+    let npc = getComputerChoice();
+    console.log(round("paper", npc));
+    roundsPlayed++;
+    if (numOfRounds - 1 < roundsPlayed){
+        console.log("Done with 5 games");
+        roundsPlayed = 0;
+    }});
+    
+document.querySelector('#scissors').addEventListener('click', ()=>{
+    let npc = getComputerChoice();
+    console.log(round("scissors", npc));
+    roundsPlayed++;
+    if (numOfRounds - 1 < roundsPlayed){
+        console.log("Done with 5 games");
+        roundsPlayed = 0;
+    }});
 
 if (playerPoints > npcPoints){
     return "You Win!";
@@ -76,5 +98,3 @@ function round(player, npc){
     }
 }
 }
-
-console.log(game());
