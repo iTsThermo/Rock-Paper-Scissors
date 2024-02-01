@@ -21,10 +21,22 @@
     margin-bottom: auto;
     text-align: center;
     color: #FFFFFF;
+    font-family: 'Pixelify Sans', sans-serif;
+    animation: glow 1s infinite alternate;
 }
-
+@keyframes glow {
+    from {
+      text-shadow: 0 0 32px #FFFFFF;
+    }
+    to {
+        text-shadow: 0 0 26px #FFFFFF;
+    }
+}
 .menutxt{
     font-size: 40px;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #FFFFFF;
 }
 
 .menu{
@@ -37,18 +49,37 @@
     gap: 100px;
 }
 
+.optionstxt{
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #FFFFFF;
+    font-size: 40px;
+    text-shadow: 0 0 10px #FFFFFF;
+}
+
 .options button{
     width: 200px;
     height: 200px;
     border-radius: 20px;
+    font-size: 40px;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #FFFFFF;
+    background: #6CB4D9;
 }
 
 .score{
     text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #FFFFFF;
+    font-size: 40px;
+    text-shadow: 0 0 10px #FFFFFF;
+    margin-bottom: auto;
 }
 
 .menu button{
+    font-family: 'Pixelify Sans', sans-serif;
     width: 100px;
     height: 35px;
+    background: #6CB4D9;
+    border-radius: 20px;
 }
 
