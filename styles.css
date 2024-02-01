@@ -9,10 +9,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 5px solid red;
     width: 100vw;
     height: 100vh;
     background: #212022;
+    box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
 }
 
 .title{
@@ -29,19 +29,36 @@
       text-shadow: 0 0 32px #FFFFFF;
     }
     to {
-        text-shadow: 0 0 26px #FFFFFF;
+        text-shadow: 0 0 20px #FFFFFF;
     }
 }
 .menutxt{
     font-size: 40px;
     font-family: 'Pixelify Sans', sans-serif;
     color: #FFFFFF;
-    text-shadow: 0 0 10px #FFFFFF;
+    text-shadow: 0 0 2px #FFFFFF;
 }
 
 .menu{
     display: flex;
-    gap: 75px;
+    gap: 40px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.menu button{
+    font-family: 'Pixelify Sans', sans-serif;
+    width: 125px;
+    height: 45px;
+    background: #a688fa;
+    border-radius: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+}
+
+.menu button:hover{
+    transform: scale(1.1);
 }
 
 .options{
@@ -53,17 +70,35 @@
     font-family: 'Pixelify Sans', sans-serif;
     color: #FFFFFF;
     font-size: 40px;
-    text-shadow: 0 0 10px #FFFFFF;
+    text-shadow: 0 0 2px #FFFFFF;
+    margin-bottom: 15px;
 }
 
 .options button{
-    width: 200px;
+    width: 225px;
     height: 200px;
     border-radius: 20px;
     font-size: 40px;
     font-family: 'Pixelify Sans', sans-serif;
     color: #FFFFFF;
-    background: #6CB4D9;
+    background: #a688fa;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+.options button:hover{
+    transform: scale(1.1);
+}
+
+.results{
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #FFFFFF;
+    font-size: 40px;
+    text-shadow: 0 0 2px #FFFFFF;
+    margin-top: 20px;
 }
 
 .score{
@@ -71,15 +106,9 @@
     font-family: 'Pixelify Sans', sans-serif;
     color: #FFFFFF;
     font-size: 40px;
-    text-shadow: 0 0 10px #FFFFFF;
+    text-shadow: 0 0 2px #FFFFFF;
     margin-bottom: auto;
 }
 
-.menu button{
-    font-family: 'Pixelify Sans', sans-serif;
-    width: 100px;
-    height: 35px;
-    background: #6CB4D9;
-    border-radius: 20px;
-}
+
 
