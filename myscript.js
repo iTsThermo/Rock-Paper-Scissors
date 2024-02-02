@@ -76,42 +76,42 @@ function round(player, npc){
     if (player == 'rock' && npc == 'scissors'){
         ++playerPoints;
         const results = document.querySelector('.results');
-        results.textContent = "Results: You wins: Rock beats Scissors";
+        results.textContent = "Results: You win: Rock beats Scissors";
         return "You win: Rock beats Scissors";
         
     }
     else if (player == 'rock' && npc == 'paper'){
         ++npcPoints;
         const results = document.querySelector('.results');
-        results.textContent = "Results: You loses: Rock loses against Paper";
+        results.textContent = "Results: You lose: Rock loses against Paper";
         return "You lose: Rock loses against Paper";
         
     }
     else if (player == 'paper' && npc == 'scissors'){
         ++npcPoints;
         const results = document.querySelector('.results');
-        results.textContent = "Results: You Loses: Paper loses against Scissors";
+        results.textContent = "Results: You Lose: Paper loses against Scissors";
         return "You Lose: Paper loses against Scissors";
         
     }
     else if(player == 'paper' && npc == 'rock'){
         ++playerPoints;
         const results = document.querySelector('.results');
-        results.textContent = "Results: You Wins: Paper wins against Rock";
+        results.textContent = "Results: You Win: Paper wins against Rock";
         return "You Win: Paper wins against Rock";
         
     }
     else if(player == 'scissors' && npc == 'rock'){
         ++npcPoints;
         const results = document.querySelector('.results');
-        results.textContent = "Results: You Loses: Scissors loses against Rock";
+        results.textContent = "Results: You Lose: Scissors loses against Rock";
         return "You Lose: Scissors loses against Rock";
         
     }
     else if(player == 'scissors' && npc == 'paper'){
         ++playerPoints;
         const results = document.querySelector('.results');
-        results.textContent = "Results: You Wins: Scissors wins against Paper";
+        results.textContent = "Results: You Win: Scissors wins against Paper";
         return "You Win: Scissors wins against Paper";
     }
     else{
